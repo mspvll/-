@@ -34,3 +34,141 @@
     max-width: 960px;
     padding: 0 15px;
  }
+
+
+
+ header{
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 0px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+    margin-bottom: 30px;
+    position: relative;
+ }
+
+ .logo{
+    display: block;
+    float: left; 
+ }
+
+ .logo span {
+   color: white;
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   border-radius: 50%;
+   margin: 5px 0;
+   text-align: center;
+   text-shadow: 2px 2px 1px rgba(0, 0, 0, .4);
+}
+.logo span:nth-child(odd) {
+   background: #EF5A42;
+}
+.logo span:nth-child(even) {
+   background: #F8B763;
+}
+
+#menu{
+   float: right;
+}
+
+#menu li{
+   display: inline-block;
+   margin-right: 30px;
+}
+
+#menu a{
+   color: rgb(27, 27, 27);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   display: block;
+   font-weight: 600;
+   line-height: 40px;
+}
+
+#menu a:hover {
+   color: #EF5A42;
+}
+#menu li:last-child {
+   margin-right: 0;
+}
+
+#searchform{
+   float: right;
+   margin-left: 46px;
+   display: inline-block;
+   position: relative;
+}
+
+#searchform input{
+   width: 170px;
+   float: left;
+   border: none;
+   padding-left: 10px;
+   height: 40px;
+   overflow: hidden;
+   outline: none;
+   color: #9E9C9C;
+   font-style: italic;
+}
+
+img{
+   width: 50%;
+   margin: 0 auto;
+}
+
+#searchform input:focus{
+   outline: 2px solid rgb(100, 132, 132);
+
+}
+
+.nav-toggle {
+   display: none;
+   position: relative;
+   float: right;
+   width: 40px;
+   height: 40px;
+   margin-left: 20px;
+   background: #EF5A42;
+   cursor: pointer;
+}
+.nav-toggle span {
+   display: block;
+   position: absolute;
+   top: 19px;
+   left: 8px;
+   right: 8px;
+   height: 2px;
+   background: white;
+}
+.nav-toggle span:before, .nav-toggle span:after {
+   content: "";
+   position: absolute;
+   display: block;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: white;
+}
+.nav-toggle span:before {
+   top: -10px;
+}
+.nav-toggle span:after {
+   bottom: -10px;
+}
+
+#menu.active{
+   max-height: 123px;
+}
+
+
+
+/* Левый контейнер  */
+
+.posts-list{
+   margin-bottom: 30px;
+   width: 64%;
+   float: left;
+
+}
