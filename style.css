@@ -26,7 +26,7 @@
     font-size: 14px;
     
     color: #373737;
-    background: #f7f7f7;
+    background: #fcffda;
  }
  .container {
     margin: 0 auto;
@@ -171,4 +171,54 @@ img{
    width: 64%;
    float: left;
 
+}
+
+
+/* Блок для статьи  */
+.post{
+   margin-bottom: 35px;
+}
+
+.post-content{
+   line-height: 1.5;
+   padding-inline-start: 1em;
+}
+
+.post-image{
+   margin-bottom: 30px;
+}
+
+.category{
+   margin-bottom: 15px;
+}
+
+.category a{
+   text-transform: uppercase;
+   color: #F8B763;
+}
+
+.post-title{
+   font-size: 26px;
+   margin-bottom: 12px;
+}
+/* продолжить чтение и сс*/
+.post-footer{
+   margin-top: 15px;
+   position: relative;
+   border-top: 1px solid #ff0000;
+   border-bottom: 1px solid #ff0000;
+}
+
+.more-link{
+   position: relative;
+   display: inline-block;
+   font-size: 10px;
+   text-transform: uppercase;
+   color: rgb(255, 255, 255);
+   line-height: 40px;
+   padding: 0 22px;
+   background: #3C3D41;
+   letter-spacing: 0.1em;
+   white-space: nowrap;
+   
 }
