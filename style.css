@@ -220,5 +220,48 @@ img{
    background: #3C3D41;
    letter-spacing: 0.1em;
    white-space: nowrap;
+}
+
+.more-link:after{
+   content: '';
+   display: block;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: 0;
+   right: 0;
+   border: solid transparent;
+   border-width: 20px 18px;
+   border-left-color:#3C3D41;
+   transform: translateX(100%);
+}
+
+.post-social{
+   position: absolute;
+   left:auto;
+   right: 0;
+   top: 50%;
+   text-align: right;
+   padding: 0;
+   font-size: 12px;
+   transform: translateY(-50%);
+}
+
+.post-social a{
+   display: inline-block;
+   margin-left: 8px;
+   color: #F8B763;
+   width: 25px;
+   height: 25px;
+   line-height: 23px;
+   text-align: center;
+   border-radius: 50%;
+   border: 1px solid;
+}
+
+aside{
+   width: 33%;
+   float: right;
    
+
 }
