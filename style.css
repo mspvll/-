@@ -113,11 +113,6 @@
    font-style: italic;
 }
 
-img{
-   width: 50%;
-   margin: 0 auto;
-}
-
 #searchform input:focus{
    outline: 2px solid rgb(100, 132, 132);
 
@@ -306,4 +301,59 @@ aside{
    font-family: 'FontAwesome';
    margin-right: 10px;
    color: #c6c6c6;
+}
+
+.widget-posts-list li{
+   border-top: 1px solid #ebebe3;
+   padding: 15px 0;
+}
+
+.widget-posts-list li:nth-child(1){
+   border-top: none;
+}
+/*TODO*/
+.post-image-small{
+   width: 30%;
+   float: left;
+   margin-right: 15px;
+}
+
+.widget-post-title{
+   float: left;
+}
+
+#subscribe{
+   position: relative;
+   width: 100%;
+   padding: 15px 0;
+}
+
+#subscribe input{
+   width: 100%;
+   display: block;
+   float: left;
+   border: 2px solid #ebebe3;
+   padding: 0 0 0 10px;
+   height: 40px;
+   position: relative;
+   outline: none;
+   color: #9e9c9c;
+   font-style: italic;
+}
+
+#subscribe button{
+   padding: 0 15px;
+   background: transparent;
+   height: 40px;
+   border: none;
+   position: absolute;
+   right: 0;
+   color: rgb(248, 80, 29);
+   cursor: pointer;
+   font-size: 18px;
+}
+
+#subscribe input:focus+button{
+   background:rgb(248, 80, 29);
+   color: #ffffff;
 }
