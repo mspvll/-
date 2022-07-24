@@ -258,10 +258,8 @@ img{
    border-radius: 50%;
    border: 1px solid;
 }
-
+/* правый контейнер*/
 aside{
    width: 33%;
    float: right;
-   
-
 }
