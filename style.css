@@ -255,11 +255,8 @@
 }
 /* правый контейнер*/
 aside{
-   width: 33%;
+   width: 33.3333333333333%;
    float: right;
-<<<<<<< HEAD
-}
-=======
 }
 /* блок для вижетов*/
 
@@ -360,4 +357,31 @@ aside{
    background:rgb(248, 80, 29);
    color: #ffffff;
 }
->>>>>>> 4b370564af714220742ec5774b5dbd85f6fe379c
+
+footer{
+   padding: 30px 0;
+   background: #a3a3a3;
+   color: lavender;
+}
+
+.footer-col{
+   width: 33.3333333%;
+   float: left;
+}
+
+.footer-col a{
+   color: lavender;
+}
+
+.footer-col:last-child{
+   text-align: right;
+}
+
+.social-bar-wrap{
+   text-align: center;
+}
+
+.social-bar-wrap a{
+   font-size: 18px;
+   padding: 0 7px;
+}
