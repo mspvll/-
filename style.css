@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: .5s ease-in-out;
  }
  ul {
     list-style: none;
@@ -18,24 +19,24 @@
 
  h1, h2, h3, h4, h5, h6 {
    font-family: 'Playfair Display';
-    font-weight: normal; 
-    
+   font-weight: normal; 
+   letter-spacing: 1px;
  }
+
  body {
     font-family: 'Open Sans', arial, sans-serif;
     font-size: 14px;
-    
     color: #373737;
     background: #fcffda;
+    line-height: 1px;
  }
+
  .container {
     margin: 0 auto;
     width: 100%;
     max-width: 960px;
     padding: 0 15px;
  }
-
-
 
  header{
     width: 100%;
@@ -83,7 +84,7 @@
    text-transform: uppercase;
    letter-spacing: 1px;
    display: block;
-   font-weight: 600;
+   font-weight: 600px;
    line-height: 40px;
 }
 
@@ -111,6 +112,17 @@
    outline: none;
    color: #9E9C9C;
    font-style: italic;
+}
+
+#searchform button{
+   background: transparent;
+   height: 40px;
+   border: none;
+   position: absolute;
+   right: 10px;
+   color: #EF5A42;
+   cursor: pointer;
+   font-size: 18px;
 }
 
 #searchform input:focus{
@@ -174,9 +186,9 @@
    margin-bottom: 35px;
 }
 
-.post-content{
+.post-content p{
    line-height: 1.5;
-   padding-inline-start: 1em;
+   padding-bottom: 1em;
 }
 
 .post-image{
@@ -373,7 +385,7 @@ footer{
    color: lavender;
 }
 
-.footer-col:last-child{
+.footer-col:last-child{ 
    text-align: right;
 }
 
@@ -384,4 +396,29 @@ footer{
 .social-bar-wrap a{
    font-size: 18px;
    padding: 0 7px;
+}
+
+@media (max-width: 768px){
+/*кнопка для переключения верхней навигации*/
+   .nav-toggle{
+      display: block;
+   }  
+   header{
+      padding: 10px 0;
+   }
+
+   #menu{
+      max-height: 0;
+      background: #ffffff;
+      float: none;
+      position: absolute;
+      overflow: hidden;
+      top: 63px;
+      right: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 3;
+   }
+   
 }
