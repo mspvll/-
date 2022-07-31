@@ -1,58 +1,61 @@
-*,*:after, *:before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    transition: .5s ease-in-out;
- }
- ul {
-    list-style: none;
- }
- a {
-    text-decoration: none;
-    outline: none;
- }
-
- img {
-    display: block;
-    width: 100%;
- }
-
- h1, h2, h3, h4, h5, h6 {
+*, *:after, *:before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   transition: .5s ease-in-out;
+   /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   outline: none;
+}
+img {
+   display: block;
+   width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
    font-family: 'Playfair Display';
-   font-weight: normal; 
+   font-weight: normal;
    letter-spacing: 1px;
- }
+}
+body {
+   font-family: 'Open Sans', arial, sans-serif;
+   font-size: 14px;
+   line-height: 1;
+   color: #373737;
+   background: #f7f7f7;
+}
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.container {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 960px;
+   padding: 0 15px;
+}
 
- body {
-    font-family: 'Open Sans', arial, sans-serif;
-    font-size: 14px;
-    color: #373737;
-    background: #fcffda;
-    line-height: 1px;
- }
-
- .container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 960px;
-    padding: 0 15px;
- }
-
- header{
-    width: 100%;
-    background: #ffffff;
-    padding: 15px 0px;
-    box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
-    margin-bottom: 30px;
-    position: relative;
- }
-
- .logo{
-    display: block;
-    float: left; 
- }
-
- .logo span {
+header {
+   width: 100%;
+   background: white;
+   box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+   padding: 15px 0;
+   margin-bottom: 30px;
+   position: relative;
+}
+/* логотип */
+.logo {
+   display: block;
+   float: left;
+}
+.logo span {
    color: white;
    display: inline-block;
    width: 30px;
@@ -69,40 +72,36 @@
 .logo span:nth-child(even) {
    background: #F8B763;
 }
-
-#menu{
+/* меню */
+#menu {
    float: right;
 }
-
-#menu li{
+#menu li {
    display: inline-block;
    margin-right: 30px;
 }
-
-#menu a{
-   color: rgb(27, 27, 27);
+#menu a {
+   color: #111;
    text-transform: uppercase;
    letter-spacing: 1px;
+   font-weight: 600;
    display: block;
-   font-weight: 600px;
    line-height: 40px;
 }
-
 #menu a:hover {
    color: #EF5A42;
 }
 #menu li:last-child {
    margin-right: 0;
 }
-
-#searchform{
+/* форма поиска */
+#searchform {
    float: right;
    margin-left: 46px;
    display: inline-block;
    position: relative;
 }
-
-#searchform input{
+#searchform input {
    width: 170px;
    float: left;
    border: none;
@@ -113,8 +112,7 @@
    color: #9E9C9C;
    font-style: italic;
 }
-
-#searchform button{
+#searchform button {
    background: transparent;
    height: 40px;
    border: none;
@@ -124,12 +122,10 @@
    cursor: pointer;
    font-size: 18px;
 }
-
-#searchform input:focus{
-   outline: 2px solid rgb(100, 132, 132);
-
+#searchform input:focus {
+   outline: 2px solid #EBEBE3;
 }
-
+/* кнопка переключения меню, появляющаяся при ширине 768px */
 .nav-toggle {
    display: none;
    position: relative;
@@ -164,97 +160,83 @@
 .nav-toggle span:after {
    bottom: -10px;
 }
-
-#menu.active{
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu.active {
    max-height: 123px;
 }
 
-
-
-/* Левый контейнер  */
-
-.posts-list{
+/* левый контейнер */
+.posts-list {
    margin-bottom: 30px;
    width: 64%;
    float: left;
-
 }
 
-
-/* Блок для статьи  */
-.post{
+/* блок для статьи */
+.post {
    margin-bottom: 35px;
 }
-
-.post-content p{
+.post-content p {
    line-height: 1.5;
    padding-bottom: 1em;
 }
-
-.post-image{
+.post-image {
    margin-bottom: 30px;
 }
-
-.category{
+.category {
    margin-bottom: 15px;
 }
-
-.category a{
-   text-transform: uppercase;
+.category a {
    color: #F8B763;
+   text-transform: uppercase;
 }
-
-.post-title{
-   font-size: 26px;
+.post-title {
    margin-bottom: 12px;
-}
-/* продолжить чтение и сс*/
-.post-footer{
-   margin-top: 15px;
-   position: relative;
-   border-top: 1px solid #ff0000;
-   border-bottom: 1px solid #ff0000;
+   font-size: 26px;
 }
 
-.more-link{
+.post-footer {
+   border-top: 1px solid #EBEBE3;
+   border-bottom: 1px solid #EBEBE3;
+   position: relative;
+   margin-top: 15px;
+}
+.more-link {
    position: relative;
    display: inline-block;
    font-size: 10px;
    text-transform: uppercase;
-   color: rgb(255, 255, 255);
-   line-height: 40px;
+   color: white;
+   line-height: 44px;
    padding: 0 22px;
    background: #3C3D41;
    letter-spacing: 0.1em;
    white-space: nowrap;
 }
-
-.more-link:after{
+.more-link:after {
    content: '';
    display: block;
    position: absolute;
-   height: 0;
    width: 0;
+   height: 0;
    top: 0;
    right: 0;
    border: solid transparent;
-   border-width: 20px 18px;
-   border-left-color:#3C3D41;
+   border-width: 22px 18px;
+   border-left-color: #3C3D41;
    transform: translateX(100%);
 }
-
-.post-social{
+.post-social {
    position: absolute;
-   left:auto;
-   right: 0;
+   left: auto;
    top: 50%;
+   right: 0;
    text-align: right;
+   transform: translateY(-50%);
    padding: 0;
    font-size: 12px;
-   transform: translateY(-50%);
 }
-
-.post-social a{
+.post-social a {
    display: inline-block;
    margin-left: 8px;
    color: #F8B763;
@@ -265,23 +247,22 @@
    border-radius: 50%;
    border: 1px solid;
 }
-/* правый контейнер*/
-aside{
-   width: 33.3333333333333%;
+
+/* правый контейнер */
+aside {
+   width: 33%;
    float: right;
 }
-/* блок для вижетов*/
 
-
-.widget{
+/* блок для виджетов */
+.widget {
    padding: 20px 15px;
    background: white;
    font-size: 13px;
    margin-bottom: 30px;
    box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
 }
-
-.widget-title{
+.widget-title {
    font-size: 18px;
    padding: 10px;
    margin-bottom: 20px;
@@ -289,114 +270,100 @@ aside{
    border: 2px solid #F8B763;
    box-shadow: 3px 3px 0 0 #F8B763;
 }
-
-.widget-category-list li{
-   border-bottom: 1px solid rgb(221, 221, 221);
+.widget-category-list li {
+   border-bottom: 1px solid #EBEBE3;
    padding: 10px 0;
    color: #c6c6c6;
-   font-style: italic; 
+   font-style: italic;
 }
-
-.widget-category-list li:last-child{
+.widget-category-list li:last-child {
    border-bottom: none;
 }
-
-.widget-category-list li a{
+.widget-category-list li a {
    color: #626262;
    margin-right: 6px;
    font-style: normal;
 }
-
-.widget-category-list li a:before{
+.widget-category-list li a:before {
    content: "\f105";
    display: inline-block;
    font-family: 'FontAwesome';
    margin-right: 10px;
    color: #c6c6c6;
 }
-
-.widget-posts-list li{
-   border-top: 1px solid #ebebe3;
+.widget-posts-list li {
+   border-top: 1px solid #EBEBE3;
    padding: 15px 0;
 }
-
-.widget-posts-list li:nth-child(1){
+.widget-posts-list li:nth-child(1) {
    border-top: none;
 }
-/*TODO*/
-.post-image-small{
+.post-image-small {
    width: 30%;
    float: left;
    margin-right: 15px;
 }
-
-.widget-post-title{
+.widget-post-title {
    float: left;
 }
-
-#subscribe{
+/* форма подписки */
+#subscribe {
    position: relative;
    width: 100%;
    padding: 15px 0;
 }
-
-#subscribe input{
+#subscribe input {
    width: 100%;
    display: block;
    float: left;
-   border: 2px solid #ebebe3;
+   border: 2px solid #EBEBE3;
    padding: 0 0 0 10px;
    height: 40px;
    position: relative;
    outline: none;
-   color: #9e9c9c;
+   color: #9E9C9C;
    font-style: italic;
 }
-
-#subscribe button{
+#subscribe button {
    padding: 0 15px;
    background: transparent;
    height: 40px;
    border: none;
    position: absolute;
    right: 0;
-   color: rgb(248, 80, 29);
+   color: #EF5A42;
    cursor: pointer;
    font-size: 18px;
 }
-
-#subscribe input:focus+button{
-   background:rgb(248, 80, 29);
-   color: #ffffff;
+#subscribe input:focus+button {
+   background: #EF5A42;
+   color: white;
 }
 
-footer{
+footer {
    padding: 30px 0;
-   background: #a3a3a3;
-   color: lavender;
+   background: #3C3D41;
+   color: white;
 }
-
-.footer-col{
-   width: 33.3333333%;
+.footer-col {
+   width: 33.3333333333%;
    float: left;
 }
-
-.footer-col a{
-   color: lavender;
+.footer-col a {
+   color: white;
 }
-
-.footer-col:last-child{ 
+.footer-col:last-child {
    text-align: right;
 }
-
-.social-bar-wrap{
+.social-bar-wrap {
    text-align: center;
 }
-
-.social-bar-wrap a{
-   font-size: 18px;
+.social-bar-wrap a {
    padding: 0 7px;
+   font-size: 18px;
 }
+
+
 
 @media (max-width: 768px){
 /*кнопка для переключения верхней навигации*/
