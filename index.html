@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="https://kit.fontawesome.com/bce7e85816.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -38,11 +39,38 @@
     <div class="container">
         <div class="posts-list">
             <article id="post-1" class="post">
-                <div class="post-image"><a href="">
-                        <img style="width:20% ;" src="./face.png"></a></div>
+
                 <div class=" post-content">
                     <div class="category"><a href="">Дизайн</a></div>
                     <h2 class="post-title">Весна</h2>
+                    <img style="width: 100%;" src="./pictures/spring.png">
+                    <p>
+                        Наконец пришла долгожданная весна. Так приятно слышать щебетание птиц и журчание ручейков. Солнечные лучи стали намного теплее и ласковее. Больше не хочется сидеть дома, так и тянет в парк.
+                        <span id="dots">...</span>
+                        <span id="more">
+                            Это очень интересно гулять по парку весной и следить за тем, как пробуждается природа. С каждым днем солнечные лучи становятся все теплее, и снег не может больше им противостоять. Его становится все меньше и меньше. Царство Снежной королевы потихоньку исчезает.    
+                            Небо весной необычайно голубое. Дни становятся все длиннее, и от этого так радостно на душе. Пришла не только новая пора, но и новая жизнь.
+                        </span>
+                    </p>
+                    <div class="post-footer">
+
+
+                        <button class="more-link" onclick="readMore()" id="more-link-id">Продолжить чтение</button>
+
+                        
+                        <div class="post-social">
+                            <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="post-2" class="post">
+                <div class=" post-content">
+                    <div class="category"><a href="">Верстка</a></div>
+                    <h2 class="post-title">Зима</h2>
+                    <img style="width: 100%;" src="./pictures/winterr.jpg">
                     <p>Очень богат русский язык словами, относящимися к временам года и к природным явлениям, с ними
                         связанным.</p>
                     <div class="post-footer">
@@ -55,11 +83,42 @@
                     </div>
                 </div>
             </article>
-            <article id="post-2" class="post">
-                ...
-            </article>
+            <article id="post-3" class="post">
+            <div class=" post-content">
+                <div class="category"><a href="">Видео</a></div>
+                <h2 class="post-title">Лето</h2>
+                <img style="width: 100%;" src="./pictures/summerr.jpg">
+                <p>Очень богат русский язык словами, относящимися к временам года и к природным явлениям, с ними
+                    связанным.</p>
+                <div class="post-footer">
+                    <a class="more-link" href="">Продолжить чтение</a>
+                    <div class="post-social">
+                        <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="post-4" class="post">
+            <div class=" post-content">
+                <div class="category"><a href="">Верстка</a></div>
+                <h2 class="post-title">Осень</h2>
+                <img style="width: 100%;" src="./pictures/autumn.jpg">
+                <p>Очень богат русский язык словами, относящимися к временам года и к природным явлениям, с ними
+                    связанным.</p>
+                <div class="post-footer">
+                    <a class="more-link" href="">Продолжить чтение</a>
+                    <div class="post-social">
+                        <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </article>
         </div>
-
+        
         <aside>
             <div class="widget">
                 <h3 class="widget-title">Категории</h3>
@@ -74,28 +133,28 @@
                 <ul class="widget-posts-list">
                     <li>
                         <div class="post-image-small">
-                            <a href=""><img src="./winter.png"></a>
+                            <a href=""><img src="./pictures/winter.png"></a>
                         </div>
                         <h4 class=" widget-post-title">Зима</h4>
                     </li>
-                    
+
                     <li>
                         <div class="post-image-small">
-                            <a href=""><img src="./flowers.png"></a>
+                            <a href=""><img src="./pictures/flowers.png"></a>
                         </div>
                         <h4 class=" widget-post-title">Весна</h4>
                     </li>
 
                     <li>
                         <div class="post-image-small">
-                            <a href=""><img src="./vacations.png"></a>
+                            <a href=""><img src="./pictures/vacations.png"></a>
                         </div>
                         <h4 class=" widget-post-title">Лето</h4>
                     </li>
 
                     <li>
                         <div class="post-image-small">
-                            <a href=""><img src="./autumn-tree-leaves.png"></a>
+                            <a href=""><img src="./pictures/autumn-tree-leaves.png"></a>
                         </div>
 
                         <h4 class=" widget-post-title">Осень</h4>
@@ -129,7 +188,7 @@
         </div>
     </footer>
     <script>
-        $(".nav-toggle").on("click", function(){
+        $(".nav-toggle").on("click", function () {
             $("#menu").toggleClass("active");
         });
     </script>

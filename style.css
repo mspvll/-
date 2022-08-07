@@ -212,6 +212,7 @@ header {
    background: #3C3D41;
    letter-spacing: 0.1em;
    white-space: nowrap;
+   border: none;
 }
 .more-link:after {
    content: '';
@@ -226,6 +227,12 @@ header {
    border-left-color: #3C3D41;
    transform: translateX(100%);
 }
+
+#more{
+   display: none;
+}
+
+
 .post-social {
    position: absolute;
    left: auto;
