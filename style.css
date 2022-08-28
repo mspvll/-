@@ -228,8 +228,12 @@ header {
    transform: translateX(100%);
 }
 
-#more{
+#moreTextSpring{
    display: none;
+}
+
+#dotsSpring{
+   display: inline;
 }
 
 
